@@ -5,14 +5,17 @@ describe('reverseString', () => {
     expect(reverseString('hello')).toEqual('olleh');
   });
 
-  test.skip('reverses multiple words', () => {
+  test('reverses multiple words', () => {
     expect(reverseString('hello there')).toEqual('ereht olleh')
   })
 
-  test.skip('works with numbers and punctuation', () => {
+  test('works with numbers and punctuation', () => {
     expect(reverseString('123! abc!')).toEqual('!cba !321')
   })
-  test.skip('works with blank strings', () => {
+  test('works with blank strings', () => {
     expect(reverseString('')).toEqual('')
+  })
+  test('works with a palindrome', () => {
+    expect(reverseString('go hang a salami im a lasagna hog')).toEqual('goh angasal a mi imalas a gnah og')
   })
 });
